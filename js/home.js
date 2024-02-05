@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function redirectToDescription(title) {
   // Encode the title and navigate to the description page
   const encodedTitle = encodeURIComponent(title).replace(/%20/g, '_');
-  window.location.href = `blogDescription.html?title=${encodedTitle}`;
+  window.location.href = `singlepage/index.html?title=${encodedTitle}`;
 }
 
 // Function to render blogs based on the current page and search term

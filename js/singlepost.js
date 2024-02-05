@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <span>${blogContent.date}</span>
                 </div>
                 <div>
-                    <img src="./assets/landscape image.jpg" alt="img">
+                    <img src="../assets/landscape image.jpg" alt="img">
                 </div>
                 <div class="content">
                     ${blogContent.content}
