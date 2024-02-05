@@ -22,6 +22,12 @@ function redirectToDescription(title) {
   window.location.href = `singlepage/index.html?title=${encodedTitle}`;
 }
 
+// Create a new instance of Fuse with your blogs data
+const fuse = new Fuse(blogs, {
+  keys: ['title', 'paragraph'],
+  threshold: 0.4, // Adjust the threshold based on your preference
+});
+
 // Function to render blogs based on the current page and search term
 function renderBlogs() {
   // Get the blog container element
@@ -79,11 +85,15 @@ function filterBlogsBySearch(allBlogs) {
   // Get the search term from the input field
   const searchTerm = document.getElementById("search").value.toLowerCase();
 
-  // Filter blogs based on title or paragraph containing the search term
-  return allBlogs.filter(blog =>
-    blog.title.toLowerCase().includes(searchTerm) || 
-    blog.paragraph.toLowerCase().includes(searchTerm)
-  );
+  // Use Fuse to perform a fuzzy search
+  const searchResults = fuse.search(searchTerm);
+
+  // Separate matching blogs and non-matching blogs
+  const matchingBlogs = searchResults.map(result => result.item);
+  const nonMatchingBlogs = allBlogs.filter(blog => !matchingBlogs.includes(blog));
+
+  // Concatenate matching blogs followed by non-matching blogs
+  return matchingBlogs.concat(nonMatchingBlogs);
 }
 
 // Function to handle input event on the search input field
