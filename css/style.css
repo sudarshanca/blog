@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-shadow: 0;
+  scroll-behavior: smooth;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* header */
+.header-nav{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+  background-color: #7014cd;
+}
+
+.logo{
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.pageactive {
+  background-color: #550aa0;
+} 
+
+.btn:hover {
+  background-color:#4e0b91;
+  color: white;
+}
+
+/*search */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  flex: 1;
+  max-width: 300px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  min-height: min-content;
+  gap: .5rem;
+  border: 1px solid #ccc;
+}
+
+.input-search {
+  display: block;
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.search span {
+ color: rgb(72, 71, 71);
+}
+/* drop down*/
+.dropbtn {
+  background-color: #7014cd;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+}
+.dropdown {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: -132%;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: max-content;
+}
+
+.dropdown-content div a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 20px 5px;
+  transition: line-height 300ms ease;
+  display: block;
+}
+
+.dropdown-content div:hover {background-color:#4e0b91}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  background-color:#4e0b91;
+}
+/*hanburger menu */
+
+.hanburger-menu{
+  display: none; 
+  color: white; 
+  align-items: center; 
+  gap: .3rem;
+  padding: 20px 5px;
+  cursor: pointer;
+}
+
+.header-nav span {
+  cursor: pointer;
+}
+
+/* footer */
+
+footer{
+  margin-top: 2rem;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+li{
+  cursor: pointer;
+  overflow: hidden;
+}
+
+nav ul li a,
+footer a{
+  text-decoration: none;
+  color: white;
+  padding:5px 15px;
+  transition: line-height 300ms ease;
+  line-height: 55px;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+nav li:hover,
+footer li:hover{
+  background-color: #4e0b91;
+}
+
+.copy-right{
+  color: white;
+  cursor: pointer;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7014cd;
+  padding: 0 1rem;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  gap: .2rem;
+}
+
+.pagination button {
+display: inline-block;
+outline: 0;
+cursor: pointer;
+text-align: center;
+border: 1px solid #babfc3;
+padding: 2px 8px;
+color: #202223;
+background: #ffffff;
+border-radius: 4px;
+font-weight: 500;
+font-size: 14px;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+}
+.pagination  button:hover {
+  background-color: #550aa0;
+    outline: 1px solid transparent;
+}
+
+
+.pagination .ellipsis {
+  margin: 0 5px;
+}
+
+.pagination .active {
+  background-color: #7014cd;
+}
+
+
+@media (max-width:700px) {
+ 
+  .dropdown-content{
+    left: 0;
+  }
+
+  .hanburger-menu{
+    display: flex;
+  }
+  
+  nav ul{
+    display: none;
+    position: absolute;
+    background-color:#7014cd;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    gap: 0;
+    top: 4rem;
+    left: 0;
+    right: 0;
+}
+
+.toggle{
+  display: flex;
+}
+
+  footer{
+    flex-direction: column-reverse;
+    padding:  1rem 0;
+  }
+  footer .copy-right {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  footer .footer-nav {
+    margin-bottom: 1rem;
+  }
+
+  footer .footer-nav ul li a {
+    line-height: 30px;
+    padding: 10px 5px;
+    align-items: center;
+  }
+  .pagination .firstbutton,
+   .pagination .lastbutton {
+    display:none;
+  }
+}
+
+
+
+
+
+
+

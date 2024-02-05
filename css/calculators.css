@@ -1,0 +1,153 @@
+h2 {
+  margin: 1rem 0;
+}
+a {
+  text-decoration: none;
+  color: #0366d6;
+}
+a:hover{
+  color: white;
+}
+
+.buttons {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 6px;
+  color: #0366d6;
+  background-color: #fafbfc;
+  border-color: #1b1f2326;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+  width: fit-content;
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: #0366d6;
+  border-color: #1b1f2326;
+  box-shadow: rgba(27, 31, 35, 0.1) 0px 1px 0px 0px, rgba(255, 255, 255, 0.03) 0px 1px 0px 0px inset;
+  transition-duration: 0.1s;
+}
+
+.buttons .actibebutton {
+  color: #ffffff;
+  background-color: #0366d6;
+}
+
+
+.form {
+  display: flex;
+  gap: 1rem;
+}
+
+form {
+  border: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  gap: 1rem;
+  width: 400px;
+  border-radius: .5rem;
+}
+
+form .inpitfield  {
+  display: flex;
+  flex-direction: column;
+ justify-content: space-evenly;
+ gap: .5rem;
+}
+
+.flex{
+  display: flex;
+  gap: 1rem;
+}
+input,
+select{
+  padding: .5rem;
+  outline: none;
+  max-width: 150px;
+  border-radius: .5rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+ border: 1px solid #c3c3c3;
+}
+
+input::placeholder{
+  font-size: 1rem;
+}
+
+#result{
+  font-size: 1.5rem;
+  margin-bottom: 1rem ;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem auto;
+
+}
+
+tbody {
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #7014cd;
+  color: white;
+}
+
+.rightcalc{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+@media (max-width:700px) {
+  .form {
+    flex-direction: column;
+  }
+
+  form {
+    max-width: 90%;
+  }
+
+}
+@media (max-width:400px) {
+  .buttons {
+    flex-direction: column;
+  }
+  
+}
