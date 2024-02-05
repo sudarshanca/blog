@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="https://finologic.in/wp-content/uploads/2022/12/favicon.gif" sizes="192x192" />
-    <link rel="apple-touch-icon" href="https://finologic.in/wp-content/uploads/2022/12/favicon.gif" />
-	<!-- google icon -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/blog.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://finologic.in/wp-content/uploads/2022/12/favicon.gif"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://finologic.in/wp-content/uploads/2022/12/favicon.gif"
+    />
+    <!-- google icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/blog.css" />
     <title>home</title>
-</head>
-<body >
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <nav>
-                <div class="logo">Logo</div>
-                <div class="header-nav"> 
-                    <div class="search">
-                        <input type="text" id="search" class="input-search" placeholder="Search blog's">
-                        <div >
-                            <span class="material-symbols-outlined" onclick="toggleSearch()">
-                                search
-                            </span>
-                        </div>
-                    </div>
-                    <ul id="myDiv"> 
-                        <li class="pageactive"><a href="index.html">Home</a></li>
-                    </ul>
-                    <div class="hanburger-menu" onclick="toggle()">
-                        <span class="material-symbols-outlined">
-                            menu
-                        </span>
-                        Menu
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <div class="container-middle">
-            <div id="blogContainer" class="blog"></div>
-            <div class="pagination" id="pagination"></div>
-        </div>
-
-        <footer>
-            <div class="copy-right"> 	&#169; 2024 Copyright</div>
-            <div class="footer-nav">
-                <ul id="nav" >
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
+      <header>
+        <nav>
+          <div class="logo">Logo</div>
+          <div class="header-nav">
+            <div class="search">
+              <input
+                type="text"
+                id="search"
+                class="input-search"
+                placeholder="Search blog's"
+              />
+              <div>
+                <span
+                  class="material-symbols-outlined"
+                  onclick="toggleSearch()"
+                >
+                  search
+                </span>
+              </div>
             </div>
-        </footer>
+            <ul id="myDiv">
+              <li class="pageactive"><a href="index.html">Home</a></li>
+            </ul>
+            <div class="hanburger-menu" onclick="toggle()">
+              <span class="material-symbols-outlined"> menu </span>
+              Menu
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container-middle">
+        <div id="blogContainer" class="blog"></div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+
+      <footer>
+        <div class="copy-right">&#169; 2024 Copyright</div>
+        <div class="footer-nav">
+          <ul id="nav">
+            <li><a href="./contact/index.html">contact</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
-
-
 
     <!-- Add this script tag to include Fuse.js -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js"></script>
     <script type="module" src="./js/home.js"></script>
     <script src="./js/script.js"></script>
-
-</body>
+  </body>
 </html>

@@ -1,17 +1,17 @@
-h1{
+h1 {
   text-align: center;
   margin: 1rem 0 0 0;
   color: #7014cd;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.hr{
+.hr {
   background-color: transparent;
-  border-bottom: 1px solid    rgba(0, 0, 0, 0.285);
-  box-shadow: 0 0 10px  rgba(9, 0, 17, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+  box-shadow: 0 0 10px rgba(9, 0, 17, 0.1);
   width: 100%;
 }
-.formcontainer{
+.formcontainer {
   padding: 0 1rem;
 }
 form {
@@ -19,17 +19,17 @@ form {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  padding: .5rem;
+  padding: 0.5rem;
   gap: 1rem;
   margin: 1rem auto;
   max-width: 600px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 form div {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 label {
@@ -37,28 +37,27 @@ label {
 }
 
 input {
-  padding: .5rem;
+  padding: 0.5rem;
   outline: none;
   max-width: 300px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: transparent;
   border: none;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-
 }
 
-input::placeholder{
+input::placeholder {
   font-size: 1rem;
 }
 
 textarea {
-  padding: .5rem;
+  padding: 0.5rem;
   max-width: 90%;
   min-width: 90%;
   outline: none;
   min-height: 60px;
-  border-radius: .5rem;
-  resize:vertical;
+  border-radius: 0.5rem;
+  resize: vertical;
   max-height: 200px;
   background-color: transparent;
   border: none;
@@ -80,15 +79,16 @@ textarea {
   color: #7014cd;
   background-color: #fafbfc;
   border-color: #1b1f2326;
-  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   transition-property: color, background-color, border-color;
- }
- .submit:hover {
-    color: #ffffff;
-    background-color: #7014cd;
-    border-color: white;
-    box-shadow: rgba(27, 31, 35, 0.1) 0px 1px 0px 0px, rgba(255, 255, 255, 0.03) 0px 1px 0px 0px inset;
-    transition-duration: 0.1s;
- }
-
+}
+.submit:hover {
+  color: #ffffff;
+  background-color: #7014cd;
+  border-color: white;
+  box-shadow: rgba(27, 31, 35, 0.1) 0px 1px 0px 0px,
+    rgba(255, 255, 255, 0.03) 0px 1px 0px 0px inset;
+  transition-duration: 0.1s;
+}

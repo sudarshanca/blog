@@ -1,5 +1,5 @@
 // Importing blogs data from external source
-import { blogs } from './blogs.js';
+import { blogs } from "./blogs.js";
 
 // Set up global variables
 let blogsPerPage = 4;
@@ -7,7 +7,7 @@ let currentPage = 1;
 const maxPagesToShow = 5;
 
 // Event listener when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Initial rendering of blogs
   renderBlogs();
 
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to redirect to blog description page
 function redirectToDescription(title) {
   // Encode the title and navigate to the description page
-  const encodedTitle = encodeURIComponent(title).replace(/%20/g, '_');
+  const encodedTitle = encodeURIComponent(title).replace(/%20/g, "_");
   window.location.href = `singlepage/index.html?title=${encodedTitle}`;
 }
 
 // Create a new instance of Fuse with your blogs data
 const fuse = new Fuse(blogs, {
-  keys: ['title', 'paragraph'],
+  keys: ["title", "paragraph"],
   threshold: 0.4, // Adjust the threshold based on your preference
 });
 
@@ -44,7 +44,7 @@ function renderBlogs() {
   const endIndex = startIndex + blogsPerPage;
 
   // Loop through the filtered blogs and create HTML elements for each
-  filteredBlogs.slice(startIndex, endIndex).forEach(blog => {
+  filteredBlogs.slice(startIndex, endIndex).forEach((blog) => {
     const blogElement = document.createElement("div");
     blogElement.className = "blog";
     blogElement.innerHTML = `
@@ -62,7 +62,7 @@ function renderBlogs() {
     `;
 
     // Add click event listener to redirect to description page
-    blogElement.addEventListener('click', () => {
+    blogElement.addEventListener("click", () => {
       redirectToDescription(blog.title);
     });
 
@@ -73,7 +73,7 @@ function renderBlogs() {
   // Scroll to the top of the page with a smooth animation
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 
   // Render pagination based on the total number of filtered blogs
@@ -89,8 +89,10 @@ function filterBlogsBySearch(allBlogs) {
   const searchResults = fuse.search(searchTerm);
 
   // Separate matching blogs and non-matching blogs
-  const matchingBlogs = searchResults.map(result => result.item);
-  const nonMatchingBlogs = allBlogs.filter(blog => !matchingBlogs.includes(blog));
+  const matchingBlogs = searchResults.map((result) => result.item);
+  const nonMatchingBlogs = allBlogs.filter(
+    (blog) => !matchingBlogs.includes(blog)
+  );
 
   // Concatenate matching blogs followed by non-matching blogs
   return matchingBlogs.concat(nonMatchingBlogs);
@@ -118,7 +120,7 @@ function renderPagination(totalBlogs) {
 
   // Add "First" button
   const firstButton = document.createElement("button");
-  firstButton.classList.add('firstbutton');
+  firstButton.classList.add("firstbutton");
   firstButton.textContent = "First";
   firstButton.onclick = () => {
     currentPage = 1;
@@ -172,7 +174,7 @@ function renderPagination(totalBlogs) {
 
   // Add "Last" button
   const lastButton = document.createElement("button");
-  lastButton.classList.add('lastbutton');
+  lastButton.classList.add("lastbutton");
   lastButton.textContent = "Last";
   lastButton.onclick = () => {
     currentPage = totalPages;
